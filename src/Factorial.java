@@ -9,4 +9,11 @@ public class Factorial {
         }
         return sum;
     }
+
+    public long divide(long n, long m) {
+        BigInteger sum_n = calculate(n);
+        BigInteger sum_m = calculate(m);
+        BigInteger divide = sum_n.divide(sum_m);
+        return divide.longValue();
+    }
 }
