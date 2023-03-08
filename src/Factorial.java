@@ -1,11 +1,11 @@
+import java.math.BigInteger;
+
 public class Factorial {
-    public int calculate(int n){
-        if(n == 0 || n == 1) {
-            return 1;
-        }
-        int sum = n;
-        for (int i = 1; i < n ; i++) {
-            sum = sum * (n-i);
+    public BigInteger calculate(long n){
+
+       BigInteger sum = BigInteger.ONE;
+        for (long i = n; i > 0 ; i--) {
+            sum = sum.multiply(BigInteger.valueOf(i));
         }
         return sum;
     }
