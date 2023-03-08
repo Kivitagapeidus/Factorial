@@ -10,44 +10,79 @@ class FactorialTest {
     private final Factorial factorial = new Factorial();
 
     @Test
-     void calculate_0() {
-       assertEquals(new BigInteger("1"),factorial.calculate(0));
+    void calculate_0() {
+        assertEquals(new BigInteger("1"), factorial.calculate(0));
     }
+
     @Test
-     void calculate_1() {
-       assertEquals(new BigInteger("1"),factorial.calculate(1));
+    void calculate_1() {
+        assertEquals(new BigInteger("1"), factorial.calculate(1));
     }
+
     @Test
-     void calculate_2() {
-       assertEquals(new BigInteger("2"),factorial.calculate(2));
+    void calculate_2() {
+        assertEquals(new BigInteger("2"), factorial.calculate(2));
     }
+
     @Test
-     void calculate_3() {
-       assertEquals(new BigInteger("6"),factorial.calculate(3));
+    void calculate_3() {
+        assertEquals(new BigInteger("6"), factorial.calculate(3));
     }
+
     @Test
-     void calculate_8() {
-       assertEquals(new BigInteger("40320"),factorial.calculate(8));
+    void calculate_8() {
+        assertEquals(new BigInteger("40320"), factorial.calculate(8));
     }
+
     @Test
-     void calculate_20() {
-       assertEquals(new BigInteger("2432902008176640000") ,factorial.calculate(20));
+    void calculate_20() {
+        assertEquals(new BigInteger("2432902008176640000"), factorial.calculate(20));
     }
+
     @Test
-     void calculate_200() {
-       assertEquals(new BigInteger("788657867364790503552363213932185062295135977687173263294742533244359449963403342920304284011984623904177212138919638830257642790242637105061926624952829931113462857270763317237396988943922445621451664240254033291864131227428294853277524242407573903240321257405579568660226031904170324062351700858796178922222789623703897374720000000000000000000000000000000000000000000000000"),factorial.calculate(200));
+    void calculate_200() {
+        assertEquals(new BigInteger("788657867364790503552363213932185062295135977687173263294742533244359449963403342920304284011984623904177212138919638830257642790242637105061926624952829931113462857270763317237396988943922445621451664240254033291864131227428294853277524242407573903240321257405579568660226031904170324062351700858796178922222789623703897374720000000000000000000000000000000000000000000000000"), factorial.calculate(200));
     }
-@Test
+
+    @Test
     void divide_1_1() {
         assertEquals(1L, factorial.divide(1, 1));
-}
-@Test
+    }
+
+    @Test
     void divide_3_2() {
         assertEquals(3L, factorial.divide(3, 2));
-}
-@Test
+    }
+
+    @Test
     void divide_2_3() {
         assertEquals(0L, factorial.divide(2, 3));
-}
+    }
+
+    @Test
+    void divide_14_1() {
+        assertEquals(87178291200L, factorial.divide(14, 1));
+    }
+
+    @Test
+    void divide_17_1() {
+        assertEquals(355687428096000L, factorial.divide(17, 1));
+    }
+
+    @Test
+    void divide_20_1() {
+        assertEquals(2432902008176640000L, factorial.divide(20, 1));
+    }
+    @Test
+    void divideNeg1() {
+        try {
+            factorial.divide(-1, -1);
+            fail("expected excep");
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("argument ei tohi olla neg", e.getMessage());
+        }
+    }
+
 
 }
