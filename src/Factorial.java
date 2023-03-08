@@ -19,3 +19,4 @@ public class Factorial {
         return divide.longValue();
     }
 }
+
