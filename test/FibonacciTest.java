@@ -7,7 +7,7 @@ class FibonacciTest {
 
     @Test
     void calculate() {
-        assertEquals(3L,fibonacci.calculate(5));
+        assertEquals(5,fibonacci.calculate(5));
     }
     @Test
     void calculate_2() {
@@ -15,10 +15,18 @@ class FibonacciTest {
     }
     @Test
     void calculate_1() {
-        assertEquals(0,fibonacci.calculate(1));
+        assertEquals(1,fibonacci.calculate(1));
     }
     @Test
-    void calculate_22() {
-        assertEquals(17711,fibonacci.calculate(23));
+    void calculate_19() {
+        assertEquals(4181,fibonacci.calculate(19));
+    }
+    @Test
+    void recursion_5() {
+        assertEquals(5,fibonacci.recursion(5));
+    }
+    @Test
+    void recursion_8() {
+        assertEquals(21,fibonacci.recursion(8));
     }
 }
