@@ -29,4 +29,8 @@ class FibonacciTest {
     void recursion_8() {
         assertEquals(21,fibonacci.recursion(8));
     }
+    @Test
+    void recursion_15() {
+        assertEquals(610,fibonacci.recursion(15));
+    }
 }

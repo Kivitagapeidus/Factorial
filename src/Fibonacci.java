@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Fibonacci {
 
@@ -26,12 +27,12 @@ public class Fibonacci {
         long result;
 
         if(n == 0){
-            result=0;
+            result = 0;
             cache.put(n, result);
             return 0;
         }
         if(n == 1 || n == 2){
-            result =1;
+            result = 1;
             cache.put(n, result);
             return 1;
         }
@@ -40,6 +41,6 @@ public class Fibonacci {
         cache.put(n, result);
         return result;
     }
-
+Optional
 
 }
